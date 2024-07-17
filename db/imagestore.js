@@ -9,6 +9,6 @@ const photoSchema = new mongoose.Schema({
     }
 });
 
-const Photo = mongoose.model('Photo', photoSchema);
+const Photo = mongoose.models.Photo || mongoose.model('Photo', photoSchema);
 
 module.exports = Photo;
